@@ -10,10 +10,10 @@
 	--dk-gray-700: #374151;
 	--dk-gray-800: #1F2937;
 	--dk-gray-900: #111827;
-	--dk-dark-bg: #313348;
-	--dk-darker-bg: #2a2b3d;
-	--navbar-bg-color: #756794;
-	--sidebar-bg-color: #252636;
+	--dk-dark-bg: #f0f0f0;
+	--dk-darker-bg: #e0e0e0;
+	--navbar-bg-color: #f0f0f0;
+	--sidebar-bg-color: #f0f0f0;
 	--sidebar-width: 250px;
 }
 
@@ -25,7 +25,8 @@
 
 body {
 	font-family: 'Inter', sans-serif;
-	background-color: var(--dk-darker-bg);
+	background-color: white;
+	color: white;
 	font-size: .925rem;
     overflow-y: scroll;
 }
@@ -35,7 +36,7 @@ body {
 }
 
 .sidebar {
-	background-color: var(--sidebar-bg-color);
+	background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 50%);	
 	width: var(--sidebar-width);
 	transition: all .3s ease-in-out;
 	transform: translateX(0);
@@ -43,32 +44,40 @@ body {
 }
 
 .sidebar .sidebar-header {
-	border-bottom: 1px solid #2a2b3c
+	margin-top: 50px;
+	border-bottom: 1px solid var(--dk-gray-100)
 }
 
 .sidebar .sidebar-header h5 a {
-	color: var(--dk-gray-300)
+	color: white;
 }
 
 .sidebar .sidebar-header p {
-	color: var(--dk-gray-400);
+	color: var(--dk-gray-100);
 	font-size: .825rem;
 }
 
 .sidebar .search .form-control ~ i {
-	color: #2b2f3a;
+	color: white;
 	right: 40px;
 	top: 22px;
+	border: 1px solid white;
 }
 
 .sidebar > ul > li {
 	padding: .7rem 1.75rem;
 }
 
-.sidebar ul > li > a {
-	color: var(--dk-gray-400);
+
+.sidebar ul > li > label.p-2 {
+	color: white;
 	text-decoration: none;
 }
+
+.sidebar ul > li:hover, .sidebar ul > li > label.p-2:hover{
+	cursor: pointer;
+}
+
 
 @media (max-width: 767px) {
 	.sidebar ul > li {
@@ -82,7 +91,7 @@ body {
 }
 
 .welcome {
-	color: var(--dk-gray-300);
+	color: var(--dk-gray-800);
 }
 
 .welcome .content {
@@ -90,7 +99,7 @@ body {
 }
 
 .welcome p {
-	color: var(--dk-gray-400);
+	color: var(--dk-gray-600);
 }
 
 
@@ -110,7 +119,7 @@ body {
 }
 
 .navbar {
-	background-color: var(--navbar-bg-color) !important;
+	background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 50%) !important;	
 	border: none !important;
 }
 .navbar .navbar-brand {color:#FFF !important}
@@ -169,8 +178,8 @@ body {
 /* CSS */
 
 .list-li{
-    color: var(--dk-gray-300);
-    font: 18px;
+    color: white;
+    font: 22px;
 }
 
 .INav{
@@ -178,7 +187,7 @@ body {
     outline: 0;
     border: 0;
     text-decoration: none;
-    border: 0.5px solid rgb(218, 218, 218);
+    border: 0.5px solid white;
     border-radius: 50%;
     padding: 4px;
     margin-right: 4px;
@@ -200,9 +209,10 @@ body {
 .card-custom{
     outline: 0;
     border: 0;
-    box-shadow: 1px 2px 3px 4px #28313ed4;
-    background-color: var(--dk-dark-bg);
+    box-shadow: 1px 2px 3px 4px #f5f5f5;
+    background-color: var(--dk-gray-100);
 }
+
 
 .card-custom:hover{
     cursor: grab;
@@ -211,7 +221,7 @@ body {
 .year-label{
     font-size: 28px;
     font-weight: bolder;
-    color: var(--dk-gray-100);
+    color: var(--dk-gray-600);
 }
 
 .graph-config{
@@ -223,9 +233,11 @@ body {
 }
 
 #sales-checklist{
-    background-color: #fff;
+	color: black;
     padding: 10px 8px;
+	border: 0.5px solid var(--dk-gray-200);
     border-radius: 20px;
+	margin: 0 auto;
 }
 
 #sales-checklist:hover > input {
@@ -248,9 +260,9 @@ body {
     background-color: transparent;
     width: 100px;
     padding: 5px;
-    color: var(--dk-gray-200);
+    color: var(--dk-gray-800);
     font-size: 18px;
-    border: 1px solid var(--dk-gray-200);
+    border: 1px solid var(--dk-gray-800);
     border-radius: 2px;
     text-transform: uppercase;
     font-weight: bold;
@@ -265,6 +277,53 @@ body {
 }
 
 .footer{
+	background-color: var(--dk-gray-300);
     color: var(--dk-gray-100);
     text-align: center;
+}
+
+.beans{
+	color: var(--dk-gray-200);
+}
+
+.beans-card-custom:nth-child(1){
+	background-color: white;
+	border-color: #afbabc;
+	color: #a94442;
+	box-shadow: 1px 2px 3px 4px #f0f0f0;
+}
+
+.beans-card-custom:nth-child(2){
+	background-color: white;
+	border-color: #bce8f1;
+	color: #3c763d;
+	box-shadow: 1px 2px 3px 4px #f0f0f0;
+}
+
+.beans-card-custom:nth-child(3){
+	background-color: white;
+	border-color: #bce8f1;
+	color: #8a6d3b;
+	box-shadow: 1px 2px 3px 4px #f0f0f0;
+}
+
+.beans-card-custom:nth-child(4){
+	background-color: white;
+	border-color: #bce8f1;
+	color: #31708f;
+	box-shadow: 1px 2px 3px 4px #f0f0f0;
+}
+
+#chart1, #chart2{
+	transition: .5s all;
+}
+
+.a-list{
+	color: inherit;
+	transition: .2s;
+}
+.a-list:hover{
+	color: var(--dk-gray-200);
+	text-decoration: underline;
+	cursor: pointer;
 }
